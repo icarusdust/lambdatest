@@ -41,7 +41,7 @@ workflows:
       - flutter build apk --release --build-name=2.0.$BUILD_NUMBER --build-number=$(($BUILD_NUMBER+ 1))
       - name: App upload and Set app id in environment variable.
         script: |
-         curl --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --header 'Authorization: Basic dFpBeTE3aXZzOUpsTFBEcWpCM24zc1p4WnEzSzFTelBtYUd3T0ZOZGRFRzlrZFllSnQ=' --form 'name="bmloYWxuZXZlcmNvZGU="' --form 'appFile=@"build/app/outputs/flutter-apk/app-release.apk"'
+         curl --location --request POST 'https://manual-api.lambdatest.com/app/upload/realDevice' --header 'Authorization: Basic bmloYWxuZXZlcmNvZGU6dFpBeTE3aXZzOUpsTFBEcWpCM24zc1p4WnEzSzFTelBtYUd3T0ZOZGRFRzlrZFllSnQ=' --form 'name="lambda1"' --form 'appFile=@"build/app/outputs/flutter-apk/app-release.apk"'
     artifacts:
 #       - build/**/outputs/**/*.apk
       - build/**/outputs/apk/**/*.apk     
